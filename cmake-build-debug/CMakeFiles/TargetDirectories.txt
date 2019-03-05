@@ -1,0 +1,3 @@
+/Users/dgorold-/fdf_read/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/dgorold-/fdf_read/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dgorold-/fdf_read/cmake-build-debug/CMakeFiles/fdf_read.dir
