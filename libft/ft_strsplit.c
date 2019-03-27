@@ -98,7 +98,7 @@ char			**ft_strsplit(char const *s, char c)
 	char	**array;
 	char	*str;
 
-	if (*s != '\0' && c != '\0')
+	if (s != NULL && *s != '\0' && c != '\0')
 	{
 		cnt = cnt_words(s, c);
 		str = (char*)s;
