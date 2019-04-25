@@ -97,9 +97,8 @@ int			color_arg(t_fdf *fdf, char *str, int flag)
 		return (0);
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]) &&
-			(str[i] < 65 || str[i] > 70) &&
-			(str[i] < 97 || str[i] > 102))
+		if (!ft_isdigit(str[i]) && str[i] < 65 && str[i] > 70
+			&& str[i] < 97 && str[i] > 102)
 			return (0);
 		i++;
 	}

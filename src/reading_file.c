@@ -6,7 +6,7 @@
 /*   By: dgorold- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/06 20:08:15 by dgorold-          #+#    #+#             */
-/*   Updated: 2019/03/27 15:45:42 by dgorold-         ###   ########.fr       */
+/*   Updated: 2019/03/27 14:20:11 by dgorold-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ static int	rm_foo(t_fdf *fdf, int y, char *line)
 	char	**array;
 
 	x = 0;
-	if (!(array = ft_strsplit(line, ' ')))
-		return (0);
+	array = ft_strsplit(line, ' ');
 	if (!(fdf->pnts[y] = (t_point*)malloc(sizeof(t_point) * fdf->words)))
 		return (0);
 	while (x < fdf->words)
@@ -49,7 +48,6 @@ static int	read_map(t_fdf *fdf, const char *str)
 	{
 		if (!rm_foo(fdf, y, line))
 		{
-			alert_usage(4);
 			ft_strdel(&line);
 			return (0);
 		}

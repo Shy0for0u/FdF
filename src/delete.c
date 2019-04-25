@@ -17,15 +17,12 @@ void		del_array(char **array)
 	int		i;
 
 	i = 0;
-	if (array != NULL)
+	while (array[i])
 	{
-		while (array[i])
-		{
-			ft_strdel(&array[i]);
-			i++;
-		}
-		free(array);
+		ft_strdel(&array[i]);
+		i++;
 	}
+	free(array);
 }
 
 void		delete_structure(t_fdf *fdf)

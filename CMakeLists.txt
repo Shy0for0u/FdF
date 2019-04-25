@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.13)
-project(fdf_read)
+project(fdf_school)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
+include_directories(includes)
 include_directories(libft/includes)
 
-add_executable(fdf_read
+add_executable(fdf_school
+		includes/header.h
 		libft/includes/libft.h
 		libft/author
 		libft/ft_atoi.c
@@ -68,15 +69,19 @@ add_executable(fdf_read
 		libft/ft_tolower.c
 		libft/ft_toupper.c
 		libft/Makefile
-		10-2.fdf
-		42.fdf
+		src/dda.c
+		src/delete.c
+		src/file_mlx.c
+		src/file_spin.c
+		src/get_next_line.c
+		src/gradient.c
+		src/main.c
+		src/reading_file.c
+		src/validation.c
 		author
-		get_next_line.c
-		header.h
-		main.c
-		Makefile
-		pyramide.fdf)
+		Makefile)
 
-target_link_libraries(fdf_read "-lmlx")
-target_link_libraries(fdf_read "-framework OpenGL")
-target_link_libraries(fdf_read "-framework AppKit")
+target_link_libraries(fdf_school "-lmlx")
+target_link_libraries(fdf_school "-framework OpenGl")
+target_link_libraries(fdf_school "-framework Appkit")
+
